@@ -303,7 +303,7 @@ exports.init = function(grunt) {
         deps = grunt.util._.chain(deps)
           .flatten()
           .filter(function(item) {return typeof item !== 'undefined'})
-          .uniq(function(item) {return item.path})
+          .uniq(function(item) {return item.id})
           .each(function(item) {
             if (item.relative) item.id = relative(path, item.path);
           })
